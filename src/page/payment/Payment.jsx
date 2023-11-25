@@ -4,16 +4,17 @@ import { Link, useNavigate } from "react-router-dom";
 import { TextField } from "@mui/material";
 import PriceList from "../../components/PriceList/PriceList";
 import "./Payment.css";
+import Popup from "../../common/popup/Popup";
 
 export default function Payment() {
   const Navigate = useNavigate();
-  const [openDraftCOR, setOpenDraftCOR] = React.useState(false);
+  const [openPopup, setOpenPopup] = React.useState(false);
   const handleOpenDraftCOR = () => {
-    setOpenDraftCOR(true);
+    setOpenPopup(true);
   };
 
-  const handleCloseDraftCOR = () => {
-    setOpenDraftCOR(false);
+  const handleClosePopup = () => {
+    setOpenPopup(false);
   };
 
   return (
@@ -120,7 +121,7 @@ export default function Payment() {
                   <button
                     to={"/booking-cargo"}
                     class="mi_btn mi_btn_secondary"
-                    onClick={() => Navigate("/track")}
+                    onClick={handleOpenDraftCOR}
                   >
                     Make Payment
                   </button>
@@ -131,10 +132,11 @@ export default function Payment() {
         </div>
       </div>
 
-      <PriceList
+      <Popup
         keepMounted
-        open={openDraftCOR}
-        onClose={handleCloseDraftCOR}
+        open={openPopup}
+        onClose={handleClosePopup}
+        type="success"
       />
     </React.Fragment>
   );
