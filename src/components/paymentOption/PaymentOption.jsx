@@ -108,7 +108,10 @@ export default function PaymentOption(props) {
                 <button
                   to={"/booking-cargo"}
                   class="mi_btn mi_btn_secondary"
-                  onClick={handleOpenPopup}
+                  onClick={() => {
+                    onClose();
+                    handleOpenPopup();
+                  }}
                 >
                   Pay
                 </button>
