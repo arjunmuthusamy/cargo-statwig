@@ -7,7 +7,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
-
+import Arrow from "/icons/arrow.svg";
 // Transition for Popup
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -87,6 +87,18 @@ function FlightPriceList() {
           <div className="CartingTableData__wrap">
             <p className="mi_tiny TableData__heading">Flight Number</p>
             <h1 className="mi_small TableData__bodyInfo">161223728</h1>
+          </div>
+          <div className="CartingTableData__wrap">
+            <p className="mi_tiny TableData__heading">Flight Date</p>
+            <h1 className="mi_small TableData__bodyInfo">25/11/2023</h1>
+          </div>
+          <div className="CartingTableData__wrap">
+            <p className="mi_tiny TableData__heading">Destination</p>
+            <div className="DestinationTableData__location_wrap">
+              <h1 className="mi_small TableData__bodyInfo">HYD</h1>
+              <img src={Arrow} alt="Arrow" />
+              <h1 className="mi_small TableData__bodyInfo">UAE</h1>
+            </div>
           </div>
         </div>
 

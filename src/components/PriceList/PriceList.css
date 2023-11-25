@@ -24,6 +24,15 @@
   font-weight: 600;
   color: var(--black_color);
 }
+
+.DestinationTableData__location_wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.DestinationTableData__location_wrap > img {
+  width: 2rem;
+}
 .ModalPage_main_title_fs {
   font-size: var(--subheading_fs);
   font-weight: 600;
@@ -47,7 +56,7 @@
 .SaveDraftItems__carting_info {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .SaveDraftItems__actions {
   display: flex;
