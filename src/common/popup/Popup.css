@@ -58,3 +58,7 @@
 .Popup__actions {
   margin-top: 1rem;
 }
+
+.Payment__action {
+  padding-bottom: 2rem;
+}

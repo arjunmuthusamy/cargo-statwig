@@ -2,9 +2,8 @@ import React from "react";
 import Banner from "../../components/banner/Banner";
 import { Link, useNavigate } from "react-router-dom";
 import { TextField } from "@mui/material";
-import PriceList from "../../components/PriceList/PriceList";
 import "./Payment.css";
-import Popup from "../../common/popup/Popup";
+import PaymentOption from "../../components/paymentOption/PaymentOption";
 
 export default function Payment() {
   const Navigate = useNavigate();
@@ -132,12 +131,7 @@ export default function Payment() {
         </div>
       </div>
 
-      <Popup
-        keepMounted
-        open={openPopup}
-        onClose={handleClosePopup}
-        type="success"
-      />
+      <PaymentOption keepMounted open={openPopup} onClose={handleClosePopup} />
     </React.Fragment>
   );
 }

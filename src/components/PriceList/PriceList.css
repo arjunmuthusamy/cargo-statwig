@@ -4,10 +4,20 @@
   justify-content: space-between;
 }
 
+.ModalPage__close_icon {
+  font-size: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  color: #20232b;
+  cursor: pointer;
+}
 .ModalPage__close_icon > i {
   font-size: 1.25rem;
-  color: var(--slate_color);
-  cursor: pointer;
 }
 .CartingTableData__wrap {
   display: flex;

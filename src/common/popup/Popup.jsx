@@ -9,6 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
+import { Link } from "react-router-dom";
 // Transition for Popup
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -51,9 +52,12 @@ export default function Popup(props) {
                   </p>
                 </div>
                 <div className="Popup__actions">
-                  <button className="mi_btn mi_btn_medium mi_btn_secondary">
+                  <Link
+                    to={"/track"}
+                    className="mi_btn mi_btn_medium mi_btn_secondary"
+                  >
                     <span>Track with AWB</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -82,9 +86,12 @@ export default function Popup(props) {
                     </p>
                   </div>
                   <div className="Popup__actions">
-                    <button className="mi_btn mi_btn_medium mi_btn_secondary">
+                    <Link
+                      to={"/booking-payment"}
+                      className="mi_btn mi_btn_medium mi_btn_secondary"
+                    >
                       <span>Try Again</span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
